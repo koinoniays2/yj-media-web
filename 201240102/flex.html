@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* 반응형 웹 - mobile first */
+        body {
+            background-color: lightblue;
+        }
+        #container {
+            display: flex; flex-wrap: wrap; justify-content: space-around; align-content: space-around;
+            height: 100vh;
+        }
+        #container div {
+            border: 1px solid black; background-color: lightgrey;
+            height: 100px;
+            width: 98%;
+        }
+        /* 태블릿 모드 (768px 이상일 때) */
+        @media screen and (min-width: 768px) {
+            body {
+                background-color: lightcoral;
+            }
+            #container div{
+                width: 48%;
+            }
+            #container div:last-child {
+                width: 98%;
+            }
+        }
+        /* PC모드일때 */
+        @media screen and (min-width: 960px) {
+            body {
+                background-color: black;
+            }
+            #container div{
+                width: 32%;
+            }
+            #container div:last-child {
+                width: 66%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box1">box1</div>
+        <div id="box2">box2</div>
+        <div id="box3">box3</div>
+        <div id="box4">box4</div>
+        <div id="box5">box5</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 300px; height: 100vh;
+            display: flex; flex-wrap: wrap; align-content: space-between; justify-content: center;
+        }
+        #container > div {
+            display: flex; flex-wrap: wrap;
+            width: 90%;
+        }
+        img {
+            width: inherit; flex-grow: 1; object-fit: cover;
+        }
+        #container > div > div {
+            flex-grow: 1;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box1">
+            <img src="images/1.jpg"/>
+            <div>
+                <p>일 분 전 만큼 먼 시간은 없다.</p>
+                <p>- Jim Bishop</p>
+            </div>
+        </div>
+        <div id="box2">
+            <img src="images/2.jpg" />
+            <div>
+                <p>웃음은 마음의 조깅이다.</p>
+                <p>- Norman Cousins</p>
+            </div>
+        </div>
+        <div id="box3">
+            <img src="images/3.jpg"/>
+            <div>
+                <p>낡은 옷은 그냥 입고 새 책을 사라.</p>
+                <p>- Austin Phelps</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

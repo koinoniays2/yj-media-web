@@ -1,0 +1,70 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* 모바일 퍼스트 */
+/* 헤더 */
+header { 
+    height: 100px; width: 100%; 
+    background-color: #4C4C4C; }
+header > div { 
+    height: 100%; width: 300px;
+    display: flex; align-items: center;}
+a { 
+    text-decoration: none; display:block; padding-left: 10px;
+    color: #EAEAEA; font-size: 1.5rem; font-weight: bold;}
+i { font-size: 2rem; margin: 0 10px; color: #FFD9EC;}
+
+/* 섹션 */
+section {
+    width: 100%; 
+    display: flex; flex-wrap: wrap; justify-content: space-evenly; 
+}
+.img {
+    flex-basis: 400px; height: 60vh; margin: 20px 0px;
+    background-position: center center; background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center center; background-size: cover;
+    background-repeat: no-repeat;
+}
+/* 강아지 종 이름 */
+.img > span {
+    position: absolute;
+    color: #FFD9EC; font-size: 2.5rem; font-weight: bold; -webkit-text-stroke: 2px #000;
+}
+.img:nth-child(odd)> span {
+    bottom: 0; right: 10px;
+}
+.img:nth-child(even) > span {
+    top: 0; left: 10px;
+} 
+/* 백그라운드 이미지 */
+.img1 {
+    background-image: url("../images/도베르만.jpg");
+}
+.img2 {
+    background-image: url("../images/보더콜리.jpg");
+}
+.img3 {
+    background-image: url("../images/슈나우저.jpg");
+}
+.img4 {
+    background-image: url("../images/치와와.jpg");
+}
+.img5 {
+    background-image: url("../images/허스키.jpg");
+}
+.img6 {
+    background-image: url("../images/달마시안.jpg");
+}
+
+@media screen and (min-width:768px) {
+    .img {
+        flex-basis: 350px;
+    }
+    
+}
+@media screen and (min-width:1200px) {
+    .img {
+        flex-basis: 600px;
+    };
+}

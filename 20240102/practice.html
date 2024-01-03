@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 300px; height: 190vh;
+            display: flex; flex-direction: column; justify-content: space-evenly; align-items: center;
+            background-color: lightcoral;
+        }
+        #container > section {
+            display: flex; flex-direction: column; align-items: center;
+            width: 90%;
+        }
+        img {
+            height: 250px; width: inherit; object-fit: cover; 
+        }
+        #container > section > div {
+            height: 250px;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+        }
+        @media screen and (min-width:768px) {
+            #container {
+                width: 700px;
+            }
+            #container > section {
+                flex-direction: row;
+            }
+            img, #container > section > div {
+                width: 300px;
+            }
+        }
+        @media screen and (min-width:1700px) {
+            #container {
+                flex-direction: row; width: 100%; height: 100%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <section id="box1">
+            <img src="images/1.jpg"/>
+            <div>
+                <p>일 분 전 만큼 먼 시간은 없다.</p>
+                <p>- Jim Bishop</p>
+            </div>
+        </section>
+        <section id="box2">
+            <img src="images/2.jpg" />
+            <div>
+                <p>웃음은 마음의 조깅이다.</p>
+                <p>- Norman Cousins</p>
+            </div>
+        </section>
+        <section id="box3">
+            <img src="images/3.jpg"/>
+            <div>
+                <p>낡은 옷은 그냥 입고 새 책을 사라.</p>
+                <p>- Austin Phelps</p>
+            </div>
+        </section>
+    </div>
+    
+</body>
+</html>

@@ -3,15 +3,16 @@
 /* 모바일 퍼스트 */
 /* 헤더 */
 header { 
-    height: 100px; width: 100%; 
+    height: 100px; width: 100%;
+    display: flex; justify-content: center;
     background-color: #4C4C4C; }
 header > div { 
-    height: 100%; width: 300px;
+    height: 100%;
     display: flex; align-items: center;}
 a { 
     text-decoration: none; display:block; padding-left: 10px;
     color: #EAEAEA; font-size: 1.5rem; font-weight: bold;}
-i { font-size: 2rem; margin: 0 10px; color: #FFD9EC;}
+i { font-size: 1.5rem; margin: 0 10px; }
 
 /* 섹션 */
 section {
@@ -26,45 +27,56 @@ section {
     background-position: center center; background-size: cover;
     background-repeat: no-repeat;
 }
-/* 강아지 종 이름 */
-.img > span {
-    position: absolute;
-    color: #FFD9EC; font-size: 2.5rem; font-weight: bold; -webkit-text-stroke: 2px #000;
+.img:hover {
+    transform: scale(1.02);
+    transition: transform 0.5s ease;
 }
-.img:nth-child(odd)> span {
-    bottom: 0; right: 10px;
+/* 강아지 설명 */
+#article {
+    width: 100%; height: 150px;
+    position: absolute; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex; justify-content: flex-end; padding: 20px;
 }
-.img:nth-child(even) > span {
-    top: 0; left: 10px;
-} 
+#article:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#article > p {
+    color: #f6f6f6; font-size: 1.2rem;
+}
 /* 백그라운드 이미지 */
 .img1 {
-    background-image: url("../images/도베르만.jpg");
+    background-image: url("../images/강아지-1.jpg");
 }
 .img2 {
-    background-image: url("../images/보더콜리.jpg");
+    background-image: url("../images/강아지-2.jpg");
 }
 .img3 {
-    background-image: url("../images/슈나우저.jpg");
+    background-image: url("../images/강아지-3.jpg");
 }
 .img4 {
-    background-image: url("../images/치와와.jpg");
+    background-image: url("../images/강아지-4.jpg");
 }
 .img5 {
-    background-image: url("../images/허스키.jpg");
+    background-image: url("../images/강아지-5.jpg");
 }
 .img6 {
-    background-image: url("../images/달마시안.jpg");
+    background-image: url("../images/강아지-6.jpg");
 }
 
 @media screen and (min-width:768px) {
     .img {
         flex-basis: 350px;
     }
-    
+    #article > p {
+        font-size: 1.1rem;
+    }
 }
 @media screen and (min-width:1200px) {
     .img {
         flex-basis: 600px;
-    };
+    }
+    #article > p {
+        font-size: 1.3rem;
+    }
 }

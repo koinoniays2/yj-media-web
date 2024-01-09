@@ -1,0 +1,140 @@
+/* 초기화 코드*/
+* { margin:0; padding:0; box-sizing: border-box; }
+a { text-decoration: none; color:#fff; }
+li { list-style: none; }
+/* 헤더 */
+header > nav {
+    width: 100%;
+    background-color: #151278;
+}
+header > nav > a {
+    display: none;
+}
+header ul {
+    display: flex;
+    justify-content: center;
+}
+header li {
+    width: 20%;
+    text-align: center;
+    padding: 20px 0;
+    border-right: 1px solid white;
+}
+header li:last-child {
+    border: none;
+}
+header div {
+    width: 100%; text-align: center;
+    padding: 50px 0;
+}
+header img {
+    width: 80%;
+    object-fit: cover;
+}
+/* 내용1 */
+#what { background-color: rgb(232, 232, 232); }
+.what-text, #why, #why-2{
+    height: 500px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: space-around;
+}
+    .what-text > div {
+        text-align: center;
+        color: orangered; font-weight: bold;
+    }
+    .what-text > i {
+        color: darkgray; font-weight: bold;
+    }
+#what img {
+    width: 100px; height: 50px;
+}
+/* 내용2 */
+.why-text {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.why-text > article {
+    display: flex; align-items: center; justify-content: center;
+    width: 35%;
+}
+.why-text img {
+    width: 300px;
+    height: 300px;
+}
+/* 내용3 */
+#why-2 { background-color: rgb(232, 232, 232); }
+#why-2 div {
+    width: 100%;
+    display: flex; justify-content: space-evenly;
+}
+#why-2 article {
+    width: 300px; height: 300px;
+    border: 1px solid black;
+    background-color: #fff;
+    padding: 30px;
+}
+/* 푸터 */
+footer {
+    width: 100%; display: flex;
+    background-color: #151278;
+}
+footer div {
+    width: 50%; color: #fff;
+    margin: 50px 100px;
+}
+footer img {
+    padding: 20px;
+    margin-top: 30px;
+}
+
+@media screen and (max-width:767px) {
+    #why{
+        height: 300px;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: space-around;
+    }
+    header nav ul {
+        display: none;
+    }
+    header > nav > a {
+        font-size: 1.3rem;
+        padding: 10px;
+        display: block;
+    }
+    .what-text {
+        padding: 30px 30px;
+    }
+    .why-text > article:nth-child(1) {
+        width: 90%;
+    }
+    .why-text > article:nth-child(2) {
+        display: none;
+    }
+    #why-2 {
+        height: 1000px;
+    }
+    #why-2 div {
+        width: 100%;
+        display: flex; flex-direction: column;
+        align-items: center;
+    }
+    #why-2 article {
+        width: 90%; height: 200px;
+        border: 1px solid black;
+        background-color: #fff;
+        padding: 20px; margin-bottom: 20px;
+    }
+    #why-2 p {
+        font-size: 0.9rem;
+    }
+    footer {
+        width: 100%; flex-direction: column;
+    }
+    footer div {
+        width: 90%;
+    }
+    footer img {
+        padding: 10px;
+    }
+}

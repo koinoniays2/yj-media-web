@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/index-style.css" rel="stylesheet" type="text/css" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <title>반응형웹 코딩</title>
+</head>
+<body>
+    <!-- 헤더 토글 메뉴 -->
+    <header>
+        <nav>
+            <input id="toggle-menu-btn" type="checkbox" />
+            <label id="toggle" for="toggle-menu-btn">
+                <img src="images/but_toggle.png" alt="toggle-menu-btn"/>
+            </label>
+            <ul id="toggle-menu">
+                <li><a href="#">처음으로</a></li>
+                <li><a href="#">코딩이란</a></li>
+                <li><a href="#">왜 코딩 교육인가</a></li>
+                <li><a href="#">교육 프로그램</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- 메인 캐러셀 이미지 -->
+    <section id="image">
+        <div class="wrapper">
+            <div><img src="images/top-1.jpg" /></div>
+        </div>
+    </section>
+    <!-- 코딩이란 -->
+    <section id="about"></section>
+    <!-- 왜 코딩 교육인가 -->
+    <section id="coding-why"></section>
+    <!-- 코딩 프로그램 -->
+    <section id="coding-pro"></section>
+    <!-- 푸터 -->
+    <footer></footer>
+    
+    <script>
+        $(function() {
+            // 토글 메뉴 플러그인 실행
+            let toggle = $("#toggle");
+            let menu = $("#toggle-menu");
+            $(toggle).on("click", function(e) {
+                e.preventDefault();
+                menu.slideToggle();
+            })
+        })
+    </script>
+</body>
+</html>

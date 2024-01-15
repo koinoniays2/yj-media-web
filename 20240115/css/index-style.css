@@ -1,0 +1,21 @@
+/* 초기화 코드 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+a { text-decoration: none; color: #fff;}
+li { list-style: none; }
+
+/* 헤더 스타일 */
+header { background-color: #34495e; }
+header #toggle-menu-btn { 
+    display: none; /* 모바일, PC모드 둘 다 숨김 */
+ }
+header #toggle-menu {
+    /* 모바일 모드에서 숨김 */
+    display: none; 
+    /* height: 0;
+    transition-duration: 0.5s */
+}
+header #toggle-menu-btn:checked ~ #toggle-menu {
+    /* 모바일 모드에서 토글버튼을 눌렀을 때 메뉴 나타남 */
+    display: block; 
+    /* height: 200px; */
+}

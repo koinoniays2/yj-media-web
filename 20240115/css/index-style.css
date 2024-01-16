@@ -8,14 +8,178 @@ header { background-color: #34495e; }
 header #toggle-menu-btn { 
     display: none; /* 모바일, PC모드 둘 다 숨김 */
  }
+header label#toggle img {
+    padding: 10px 20px;
+}
 header #toggle-menu {
     /* 모바일 모드에서 숨김 */
-    display: none; 
+    display: none;
     /* height: 0;
     transition-duration: 0.5s */
 }
 header #toggle-menu-btn:checked ~ #toggle-menu {
     /* 모바일 모드에서 토글버튼을 눌렀을 때 메뉴 나타남 */
-    display: block; 
+    display: block;
+    /* display: block;  */
     /* height: 200px; */
+}
+
+header nav ul#toggle-menu li {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #576979;
+}
+
+/* 코딩이란 */
+#about article.section-contents {
+    padding: 20px 50px;
+}
+#about article p {
+    color: #ff6600;
+    font-family: "Noto Serif KR", serif;
+    font-size: 1.4rem;
+    text-align: center;
+    font-style: italic;
+    line-height: 1.8;
+}
+#about article p span {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* 반응형 웹 PC모드 _ 네비게이션 */
+@media screen and (min-width:764px) {
+    /* PC 모드에서 토글메뉴 숨김 */
+    header nav label#toggle {
+        display: none;
+    }
+    /* PC 모드에서 주메뉴 보이게 하기 */
+    header nav ul#toggle-menu {
+        /* 속성 2개 같이 적기 가능, 우선 적용하기 !important
+        (모바일 모드에서 토글됐을 때 적용된 것을 무시할 수 있다.) */
+        display: block flex !important;
+        max-width: 1300px;
+        justify-content: space-around;
+        height: 60px;
+        margin: 0 auto;
+    }
+    header nav ul#toggle-menu a {
+        line-height: 60px;
+    }
+    header nav ul#toggle-menu li {
+        padding: 0;
+        border-bottom: 0;
+    }
+}
+
+/* 왜 코딩 교육인가 */
+#coding-why .contents-img {
+    display: none;
+}
+#coding-why article.section-contents {
+    padding: 20px 50px;
+}
+#coding-why div.contents-text {
+    padding: 0 50px;
+}
+#coding-why article p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* 반응형 웹 PC모드 _ 왜 코딩교육인가 */
+@media screen and (min-width: 764px) {
+    #coding-why article.section-contents {
+        display: flex;
+    }
+    #coding-why article .contents-img {
+        display: block;
+        width: 40%;
+        text-align: center;
+    }
+    #coding-why div.contents-img img {
+        max-width: 250px;
+    }
+    #coding-why .contents-texte {
+        width: 60%;
+    }
+}
+
+/* 코딩 프로그램 */
+#coding-pro .section-contents {
+    padding: 20px 50px;
+}
+#coding-pro h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+#coding-pro .program {
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid black;
+    background-color: #f6f6f6;
+}
+
+@media screen and (min-width:764px) {
+    #coding-pro .section-contents {
+        display: flex;
+        justify-content: space-between;
+    }
+    #coding-pro .program {
+        width: 22%;
+    }
+}
+
+/* 푸터 */
+footer {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    background-color: #34495e;
+    color: #fff;
+}
+footer #sns {
+    margin-top: 50px;
+}
+footer #sns a {
+    margin-right: 30px;
+}
+footer #sns a:last-child {
+    margin-right: 0;
+}
+@media screen and (min-width:764px) {
+    footer .wrapper {
+        display: flex;
+    }
+    footer #content {
+        width: 60%;
+    }
+    footer #sns {
+        width: 40%;
+        padding-left: 5%;
+    }
+}
+
+/* 공통 섹션 */
+section:nth-child(2n+1) {
+    background-color: #dbdbdb;
+}
+section:nth-child(2n) {
+    background-color: #f6f6f6;
+}
+.wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+/* 섹션 제목 */
+.section-title {
+    margin: 50px 30px;
+}
+.section-title h3 {
+    font-size: 1.8rem;
+    text-align: center;
+}
+section .slider img {
+    width: 100%;
 }
